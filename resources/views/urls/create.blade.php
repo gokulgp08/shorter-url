@@ -3,7 +3,7 @@
 @section('content')
   
 <div class="mt-5 card">
-  <h2 class="card-header">Add New Product</h2>
+  <h2 class="card-header">Create New</h2>
   <div class="card-body">
   
     <div class="gap-2 d-grid d-md-flex justify-content-md-end">

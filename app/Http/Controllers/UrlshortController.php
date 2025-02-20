@@ -16,7 +16,7 @@ class UrlshortController extends Controller
     {
         $urls = Urlshort::where('created_by', Auth::user()->id)->latest()->paginate(50);
 
-        return view('urls.index',compact('urls'))->with((request()->input('page', 1) - 1) * 5);
+        return view('urls.index',compact('urls'))->with((request()->input('page', 1) - 1) * 50);
     }
 
     /**
@@ -53,7 +53,7 @@ class UrlshortController extends Controller
         $total_visit = Urlvisit::where('url_id', $urlshort->id)->count();
 
         return view('urls.show',compact('urlshort','visits','total_visit'))
-                ->with((request()->input('page', 1) - 1) * 5);
+                ->with((request()->input('page', 1) - 1) * 50);
 
     }
 
